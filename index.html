@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>(website migration in progress...)</title>
+    <style>
+      html,body {
+        width:100%;
+        height:100%;
+        margin:0px;
+        background-color:#fff;
+      }
+      body {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font:1em sans-serif;
+        background:linear-gradient(#000,#035);
+      }
+      main {
+        border-radius:0.4em;
+        background-color:#eee;
+        margin:0.5em;
+        padding:2em;
+        font-size:1em;
+        max-width:32em;
+        width:100%;
+        flex-grow:1;
+        box-shadow:
+          inset 0 -0.2em 0.5em 0 #555,
+          0 0 2em 0 #eee;
+      }
+      h1,code {
+        text-align:center;
+      }
+      code {
+        display:block;
+        margin-inline:0px;
+        letter-spacing:0.2em;
+      }
+      .marquee {
+        display:block;
+        width:100%;
+        white-space:pre;
+        overflow:clip;
+      }
+      .marquee span {
+        animation:scroll 10s linear infinite;
+      }
+      @keyframes scroll {
+        0% {margin-inline-start:0%;}
+        100% {margin-inline-start:-254%;}
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <code>qwertya15.github.io</code>
+      <h1>(website migration in progress)</h1>
+      <small><i><span class="marquee">Thank you for your patience. This website will be up soon. Please hold while the website is completed. This website is in the process of being set up. Please check back later. This website is currently under construction.</span></i></small>
+    </main>
+    <script>
+      let m=document.querySelector('.marquee');
+      m.innerHTML=`<span>${m.textContent+m.textContent}</span>`;
+    </script>
+  </body>
+</html>
