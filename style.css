@@ -71,7 +71,7 @@ header nav {
   right:0px;
   top:4em;
   width:100%;
-  background-color:var(--t-bg4);
+  background-color:var(--t-bg2);
   opacity:0;
   visibility:hidden;
   pointer-events:none;
@@ -98,7 +98,8 @@ header nav li a {
   transition:var(--t-tt);
   line-height:1.5em;
 }
-header nav li a:is(:hover,:focus-visible) {
+header nav li a:is(:hover,:focus-visible),
+header nav li a.current {
   background-color:var(--t-bg3);
 }
 header #logo {
@@ -146,7 +147,7 @@ main {
   flex-direction:column;
   margin-block:2em;
   font-size:1em;
-  max-width:min(48em,70vw);
+  max-width:min(64em,90vw);
   width:100%;
   flex-grow:1;
   box-shadow:
@@ -239,6 +240,29 @@ section.splash>.attribution {
     inset -0.3em -0.3em 0.4em -0.1em var(--t-bg4),
     0.4em 0.4em 0.6em -0.3em var(--t-bg4);
 }
+section[id] {
+  scroll-margin-top:3em;
+}
+section fieldset,
+section fieldset legend {
+  border:2px groove var(--t-bg4);
+  border-radius:0.3em;
+}
+section fieldset {
+  padding-block:0.7em;
+}
+section fieldset legend {
+  padding:0.3em 0.15em;
+}
+section fieldset legend h1 {
+  margin-block:0em;
+  margin-inline:0.1em;
+}
+section fieldset legend h1 a {
+  color:var(--t-fg1);
+  text-decoration-thickness:2px;
+  text-underline-offset:2px;
+}
 footer {
   flex-wrap:wrap;
   flex-direction:row;
@@ -259,12 +283,28 @@ footer a svg {
   color:inherit;
 }
 
-
+input[type="file"] {
+  display:inline-block;
+  padding:1.5em 4em;
+  background-color:var(--t-bg2);
+  box-shadow:inset 0 0 0.5em var(--t-bg4);
+  border-radius:0.5em;
+  border:dashed 1px var(--t-fg2);
+  transition:var(--t-tt);
+}
+input[type="file"]:is(:hover,:focus-visible) {
+  background-color:var(--t-bg1);
+  box-shadow:inset 0 0 1.2em -0.2em var(--t-ac1);
+}
 code {
   display:inline-block;
   background-color:var(--t-bg3);
   padding:0.2em 0.4em;
   border-radius:0.2em;
+}
+hr {
+  border:none;
+  border-top:2px groove var(--t-bg4);
 }
 
 .spinner {
